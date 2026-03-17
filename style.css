@@ -1,0 +1,130 @@
+/* Import messy handwritten + clean font combo */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Special+Elite&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Patrick Hand', cursive;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 60px;
+    color: #222;
+    position: relative;
+}
+
+/* Subtle paper texture feel */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Headings look like pinned notes */
+h2, h3, h4, h5{
+    background: #fff8b5;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 25px 0 10px 0;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+    font-family: 'Special Elite', monospace;
+}
+
+/* Random messy rotations */
+h3:nth-of-type(odd){
+    transform: rotate(2deg);
+    background: #ffd6e0;
+}
+
+h4:nth-of-type(odd){
+    transform: rotate(-3deg);
+    background: #d6f5ff;
+}
+
+/* Paragraphs look like diary entries */
+p{
+    background: white;
+    padding: 20px;
+    margin: 10px 0 25px 0;
+    border-left: 6px solid #ff6b81;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+    transform: rotate(1deg);
+    line-height: 1.6;
+}
+
+/* Quotes look like scribbled thoughts */
+q{
+    display: block;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #444;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    transform: rotate(-1deg);
+}
+
+/* Images like polaroids */
+img{
+    margin: 15px 0;
+    padding: 10px;
+    background: white;
+    box-shadow: 6px 6px 20px rgba(0,0,0,0.25);
+    transform: rotate(-3deg);
+    transition: 0.3s ease;
+    max-width: 100%;
+}
+
+img:nth-of-type(even){
+    transform: rotate(3deg);
+}
+
+img:hover{
+    transform: scale(1.05) rotate(0deg);
+}
+
+/* Audio players styled like mini widgets */
+audio{
+    display: block;
+    margin: 10px 0 25px 0;
+    width: 300px;
+    filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2));
+}
+
+/* Emphasis text */
+em{
+    display: block;
+    margin: 10px 0 20px 0;
+    font-size: 1.5rem;
+    color: #555;
+    transform: rotate(-1deg);
+}
+
+/* Add random floating doodles effect */
+body::after{
+    content: "★   ✦   ✎   ☁";
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    body{
+        padding: 30px;
+    }
+
+    audio{
+        width: 100%;
+    }
+}
