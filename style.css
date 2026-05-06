@@ -57,6 +57,7 @@ p{
     box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
     transform: rotate(1deg);
     line-height: 1.6;
+    font-size: 25px;
 }
 
 /* Quotes look like scribbled thoughts */
@@ -128,3 +129,38 @@ body::after{
         width: 100%;
     }
 }
+
+.scrap-btn{
+    display: inline-block;
+    margin: 30px 0;
+    padding: 15px 25px;
+    
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    color: #222;
+    text-decoration: none;
+
+    background: #fff8b5;
+    border: 2px solid #000;
+
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    transform: rotate(-2deg);
+
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* slight messy variation */
+.scrap-btn:hover{
+    transform: rotate(1deg) scale(1.05);
+    background: #ffd6e0;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.35);
+}
+
+/* active press feel */
+.scrap-btn:active{
+    transform: translate(3px,3px) rotate(0deg);
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+
